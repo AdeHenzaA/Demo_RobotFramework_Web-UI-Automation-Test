@@ -1,0 +1,34 @@
+name: Robot Framework Tests
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y curl
+        curl -sSL https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -o chrome.deb
+        sudo apt-get install -y ./chrome.deb
+        sudo apt-get install -y unzip
+        sudo apt-get install -y xvfb
+        sudo apt-get install -y libglib2.0-0 libnss3 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 fonts-liberation libappindicator1 libdbusmenu-glib4 libdbusmenu-gtk4 libindicator7 libpango1.0-0 libcairo2-dev
+        curl -sSL https://chromedriver.storage.googleapis.com/$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip -o chromedriver.zip
+        unzip chromedriver.zip -d /usr/local/bin
+        chmod +x /usr/local/bin/chromedriver
+        sudo apt-get update
+        sudo apt-get install -y python3-pip
+        pip3 install robotframework
+        pip3 install robotframework-seleniumlibrary
+
+    - name: Run tests
+      run: |
+        robot -d Test_Results/UltimateQA Test_Object/UltimateQA/Testcases/
