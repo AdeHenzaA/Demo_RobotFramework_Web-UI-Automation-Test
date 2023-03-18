@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.6 on linux)" generated="20230318 16:16:45.250" rpa="false" schemaversion="3">
+<suite id="s1" name="Testcases" source="/home/ade/Demo_RobotFramework_Web-UI-Automation-Test/Test_Object/UltimateQA/Testcases">
+<suite id="s1-s1" name="Login" source="/home/ade/Demo_RobotFramework_Web-UI-Automation-Test/Test_Object/UltimateQA/Testcases/Login.robot">
+<test id="s1-s1-t1" name="1. Press signin button without enter any credential" line="9">
+<kw name="Set Test Message" library="BuiltIn">
+<arg>Verification Passed</arg>
+<doc>Sets message for the current test case.</doc>
+<msg timestamp="20230318 16:16:45.405" level="INFO">Set test message to:
+Verification Passed</msg>
+<status status="PASS" starttime="20230318 16:16:45.405" endtime="20230318 16:16:45.405"/>
+</kw>
+<kw name="Open Chrome Browser" library="Global">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>\</arg>
+<arg>${Browser_Chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230318 16:16:45.406" level="INFO">Opening browser 'headlesschrome' to base url ''.</msg>
+<status status="PASS" starttime="20230318 16:16:45.406" endtime="20230318 16:16:46.128"/>
+</kw>
+<status status="PASS" starttime="20230318 16:16:45.405" endtime="20230318 16:16:46.128"/>
+</kw>
+<kw name="Go to Sign in Page" library="LoginPage">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${Url_SignIn}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230318 16:16:46.129" level="INFO">Opening url 'https://courses.ultimateqa.com/users/sign_in'</msg>
+<status status="PASS" starttime="20230318 16:16:46.129" endtime="20230318 16:16:49.617"/>
+</kw>
+<status status="PASS" starttime="20230318 16:16:46.128" endtime="20230318 16:16:49.617"/>
+</kw>
+<kw name="Click The Sign In Button" library="LoginPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//button[@data-callback='onSubmit']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230318 16:16:49.617" endtime="20230318 16:16:49.644"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[@data-callback='onSubmit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230318 16:16:49.645" level="INFO">Clicking element 'xpath=//button[@data-callback='onSubmit']'.</msg>
+<status status="PASS" starttime="20230318 16:16:49.644" endtime="20230318 16:16:49.687"/>
+</kw>
+<status status="PASS" starttime="20230318 16:16:49.617" endtime="20230318 16:16:49.687"/>
+</kw>
+<kw name="Message &quot;Invalid email or password.&quot; is displayed" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//h2[text()[normalize-space()='Welcome Back!']]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230318 16:16:49.688" level="INFO">Clicking element 'xpath=//h2[text()[normalize-space()='Welcome Back!']]'.</msg>
+<status status="PASS" starttime="20230318 16:16:49.687" endtime="20230318 16:16:49.726"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//li[text()[normalize-space()='Invalid email or password.']]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230318 16:16:49.726" endtime="20230318 16:16:51.258"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath=//li[text()[normalize-space()='Invalid email or password.']]</arg>
+<arg>Invalid email or password.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230318 16:16:51.273" level="INFO">Element 'xpath=//li[text()[normalize-space()='Invalid email or password.']]' contains text 'Invalid email or password.'.</msg>
+<status status="PASS" starttime="20230318 16:16:51.258" endtime="20230318 16:16:51.273"/>
+</kw>
+<status status="PASS" starttime="20230318 16:16:49.687" endtime="20230318 16:16:51.273"/>
+</kw>
+<doc>Test Steps :
+- Open Chrome Browser
+- Go to Login Page
+- Click Signin button
+- Make sure the Warning Message displayed</doc>
+<tag>Login</tag>
+<status status="PASS" starttime="20230318 16:16:45.404" endtime="20230318 16:16:51.273">Verification Passed</status>
+</test>
+<doc>This is UI Automation Test on the Signin Page</doc>
+<status status="PASS" starttime="20230318 16:16:45.266" endtime="20230318 16:16:51.274"/>
+</suite>
+<status status="PASS" starttime="20230318 16:16:45.250" endtime="20230318 16:16:51.275"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Login</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Testcases">Testcases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Login">Testcases.Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
