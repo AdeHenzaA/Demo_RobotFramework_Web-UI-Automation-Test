@@ -10,5 +10,5 @@ Click The Sign In Button
     Click Element    xpath=//button[@data-callback='onSubmit']
 Message "Invalid email or password." is displayed
     #Click Element    xpath=//h2[text()[normalize-space()='Welcome Back!']]
-    Wait Until Element Is Visible    xpath=//li[text()[normalize-space()='Invalid email or password.']]    timeout=30s
-    Element Should Contain    xpath=//li[text()[normalize-space()='Invalid email or password.']]   Invalid email or password.
+    Wait Until Element Is Visible    xpath=//*[@id="notice"]/ul/li    timeout=30s
+    Element Should Contain    xpath=//*[@id="notice"]/ul/li   Invalid email or password.
