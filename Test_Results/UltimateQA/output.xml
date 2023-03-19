@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.10.6 on linux)" generated="20230319 08:30:30.898" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.10.6 on linux)" generated="20230319 08:50:30.448" rpa="false" schemaversion="3">
 <suite id="s1" name="Testcases" source="/home/ade/Demo_RobotFramework_Web-UI-Automation-Test/Test_Object/UltimateQA/Testcases">
 <suite id="s1-s1" name="Login" source="/home/ade/Demo_RobotFramework_Web-UI-Automation-Test/Test_Object/UltimateQA/Testcases/Login.robot">
 <test id="s1-s1-t1" name="1. Press signin button without enter any credential" line="9">
 <kw name="Set Test Message" library="BuiltIn">
 <arg>Verification Passed</arg>
 <doc>Sets message for the current test case.</doc>
-<msg timestamp="20230319 08:30:31.011" level="INFO">Set test message to:
+<msg timestamp="20230319 08:50:30.563" level="INFO">Set test message to:
 Verification Passed</msg>
-<status status="PASS" starttime="20230319 08:30:31.011" endtime="20230319 08:30:31.011"/>
+<status status="PASS" starttime="20230319 08:50:30.563" endtime="20230319 08:50:30.563"/>
 </kw>
 <kw name="Open Chrome Browser" library="Global">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>\</arg>
 <arg>${Browser_Chrome}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230319 08:30:31.012" level="INFO">Opening browser 'headlesschrome' to base url ''.</msg>
-<status status="PASS" starttime="20230319 08:30:31.012" endtime="20230319 08:30:31.688"/>
+<msg timestamp="20230319 08:50:30.564" level="INFO">Opening browser 'headlesschrome' to base url ''.</msg>
+<status status="PASS" starttime="20230319 08:50:30.564" endtime="20230319 08:50:31.236"/>
 </kw>
-<status status="PASS" starttime="20230319 08:30:31.012" endtime="20230319 08:30:31.688"/>
+<status status="PASS" starttime="20230319 08:50:30.564" endtime="20230319 08:50:31.236"/>
 </kw>
 <kw name="Go to Sign in Page" library="LoginPage">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${Url_SignIn}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230319 08:30:31.689" level="INFO">Opening url 'https://courses.ultimateqa.com/users/sign_in'</msg>
-<status status="PASS" starttime="20230319 08:30:31.689" endtime="20230319 08:30:35.451"/>
+<msg timestamp="20230319 08:50:31.237" level="INFO">Opening url 'https://parabank.parasoft.com/parabank/index.htm'</msg>
+<status status="PASS" starttime="20230319 08:50:31.237" endtime="20230319 08:50:34.724"/>
 </kw>
-<status status="PASS" starttime="20230319 08:30:31.689" endtime="20230319 08:30:35.451"/>
+<status status="PASS" starttime="20230319 08:50:31.236" endtime="20230319 08:50:34.724"/>
 </kw>
 <doc>Test Steps :
 - Open Chrome Browser
@@ -35,52 +35,41 @@ Verification Passed</msg>
 - Click Signin button
 - Make sure the Warning Message displayed</doc>
 <tag>Login</tag>
-<status status="PASS" starttime="20230319 08:30:31.011" endtime="20230319 08:30:35.451">Verification Passed</status>
+<status status="PASS" starttime="20230319 08:50:30.562" endtime="20230319 08:50:34.724">Verification Passed</status>
 </test>
 <test id="s1-s1-t2" name="2. Click The Sign In Button" line="21">
 <kw name="Click The Sign In Button" library="LoginPage">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=//button[@data-callback='onSubmit']</arg>
+<arg>xpath=//input[@type='submit']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230319 08:30:35.452" endtime="20230319 08:30:35.470"/>
+<status status="PASS" starttime="20230319 08:50:34.725" endtime="20230319 08:50:34.748"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//button[@data-callback='onSubmit']</arg>
+<arg>xpath=//input[@type='submit']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230319 08:30:35.471" level="INFO">Clicking element 'xpath=//button[@data-callback='onSubmit']'.</msg>
-<status status="PASS" starttime="20230319 08:30:35.470" endtime="20230319 08:30:35.512"/>
+<msg timestamp="20230319 08:50:34.748" level="INFO">Clicking element 'xpath=//input[@type='submit']'.</msg>
+<status status="PASS" starttime="20230319 08:50:34.748" endtime="20230319 08:50:37.654"/>
 </kw>
-<status status="PASS" starttime="20230319 08:30:35.452" endtime="20230319 08:30:35.512"/>
+<status status="PASS" starttime="20230319 08:50:34.725" endtime="20230319 08:50:37.654"/>
 </kw>
-<status status="PASS" starttime="20230319 08:30:35.452" endtime="20230319 08:30:35.512"/>
+<status status="PASS" starttime="20230319 08:50:34.725" endtime="20230319 08:50:37.655"/>
 </test>
 <test id="s1-s1-t3" name="3. Message &quot;Invalid email or password.&quot; is displayed" line="23">
 <kw name="Message &quot;Invalid email or password.&quot; is displayed" library="LoginPage">
-<kw name="Reload Page" library="SeleniumLibrary">
-<doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20230319 08:30:35.513" endtime="20230319 08:30:37.909"/>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Please enter a username and password.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230319 08:50:37.667" level="INFO">Current page contains text 'Please enter a username and password.'.</msg>
+<status status="PASS" starttime="20230319 08:50:37.656" endtime="20230319 08:50:37.667"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>css=div#notice&gt;ul&gt;li</arg>
-<arg>timeout=30s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230319 08:30:37.909" endtime="20230319 08:30:37.925"/>
+<status status="PASS" starttime="20230319 08:50:37.656" endtime="20230319 08:50:37.668"/>
 </kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>css=div#notice&gt;ul&gt;li</arg>
-<arg>Invalid email or password.</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20230319 08:30:37.939" level="INFO">Element 'css=div#notice&gt;ul&gt;li' contains text 'Invalid email or password.'.</msg>
-<status status="PASS" starttime="20230319 08:30:37.925" endtime="20230319 08:30:37.939"/>
-</kw>
-<status status="PASS" starttime="20230319 08:30:35.513" endtime="20230319 08:30:37.939"/>
-</kw>
-<status status="PASS" starttime="20230319 08:30:35.512" endtime="20230319 08:30:37.940"/>
+<status status="PASS" starttime="20230319 08:50:37.655" endtime="20230319 08:50:37.668"/>
 </test>
 <doc>This is UI Automation Test on the Signin Page</doc>
-<status status="PASS" starttime="20230319 08:30:30.912" endtime="20230319 08:30:37.940"/>
+<status status="PASS" starttime="20230319 08:50:30.462" endtime="20230319 08:50:37.668"/>
 </suite>
-<status status="PASS" starttime="20230319 08:30:30.898" endtime="20230319 08:30:37.941"/>
+<status status="PASS" starttime="20230319 08:50:30.448" endtime="20230319 08:50:37.669"/>
 </suite>
 <statistics>
 <total>
