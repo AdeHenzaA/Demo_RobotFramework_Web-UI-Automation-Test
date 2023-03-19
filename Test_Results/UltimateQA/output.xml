@@ -1,63 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.10.6 on linux)" generated="20230319 07:29:18.829" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.10.6 on linux)" generated="20230319 07:50:39.903" rpa="false" schemaversion="3">
 <suite id="s1" name="Testcases" source="/home/ade/Demo_RobotFramework_Web-UI-Automation-Test/Test_Object/UltimateQA/Testcases">
 <suite id="s1-s1" name="Login" source="/home/ade/Demo_RobotFramework_Web-UI-Automation-Test/Test_Object/UltimateQA/Testcases/Login.robot">
 <test id="s1-s1-t1" name="1. Press signin button without enter any credential" line="9">
 <kw name="Set Test Message" library="BuiltIn">
 <arg>Verification Passed</arg>
 <doc>Sets message for the current test case.</doc>
-<msg timestamp="20230319 07:29:18.942" level="INFO">Set test message to:
+<msg timestamp="20230319 07:50:40.016" level="INFO">Set test message to:
 Verification Passed</msg>
-<status status="PASS" starttime="20230319 07:29:18.941" endtime="20230319 07:29:18.942"/>
+<status status="PASS" starttime="20230319 07:50:40.015" endtime="20230319 07:50:40.016"/>
 </kw>
 <kw name="Open Chrome Browser" library="Global">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>\</arg>
 <arg>${Browser_Chrome}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230319 07:29:18.942" level="INFO">Opening browser 'headlesschrome' to base url ''.</msg>
-<status status="PASS" starttime="20230319 07:29:18.942" endtime="20230319 07:29:19.617"/>
+<msg timestamp="20230319 07:50:40.016" level="INFO">Opening browser 'headlesschrome' to base url ''.</msg>
+<status status="PASS" starttime="20230319 07:50:40.016" endtime="20230319 07:50:40.696"/>
 </kw>
-<status status="PASS" starttime="20230319 07:29:18.942" endtime="20230319 07:29:19.617"/>
+<status status="PASS" starttime="20230319 07:50:40.016" endtime="20230319 07:50:40.696"/>
 </kw>
 <kw name="Go to Sign in Page" library="LoginPage">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${Url_SignIn}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230319 07:29:19.617" level="INFO">Opening url 'https://courses.ultimateqa.com/users/sign_in'</msg>
-<status status="PASS" starttime="20230319 07:29:19.617" endtime="20230319 07:29:22.311"/>
+<msg timestamp="20230319 07:50:40.697" level="INFO">Opening url 'https://courses.ultimateqa.com/users/sign_in'</msg>
+<status status="PASS" starttime="20230319 07:50:40.697" endtime="20230319 07:50:44.228"/>
 </kw>
-<status status="PASS" starttime="20230319 07:29:19.617" endtime="20230319 07:29:22.311"/>
+<status status="PASS" starttime="20230319 07:50:40.696" endtime="20230319 07:50:44.228"/>
 </kw>
 <kw name="Click The Sign In Button" library="LoginPage">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>xpath=//button[@data-callback='onSubmit']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230319 07:29:22.312" endtime="20230319 07:29:22.329"/>
+<status status="PASS" starttime="20230319 07:50:44.229" endtime="20230319 07:50:44.247"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//button[@data-callback='onSubmit']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230319 07:29:22.329" level="INFO">Clicking element 'xpath=//button[@data-callback='onSubmit']'.</msg>
-<status status="PASS" starttime="20230319 07:29:22.329" endtime="20230319 07:29:22.365"/>
+<msg timestamp="20230319 07:50:44.248" level="INFO">Clicking element 'xpath=//button[@data-callback='onSubmit']'.</msg>
+<status status="PASS" starttime="20230319 07:50:44.248" endtime="20230319 07:50:44.288"/>
 </kw>
-<status status="PASS" starttime="20230319 07:29:22.312" endtime="20230319 07:29:22.365"/>
+<status status="PASS" starttime="20230319 07:50:44.228" endtime="20230319 07:50:44.288"/>
 </kw>
 <kw name="Message &quot;Invalid email or password.&quot; is displayed" library="LoginPage">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Invalid email or password.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230319 07:50:45.826" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230319 07:50:45.826" level="FAIL">StaleElementReferenceException: Message: stale element reference: element is not attached to the page document
+  (Session info: headless chrome=111.0.5563.64)
+Stacktrace:
+#0 0x557e29344243 &lt;unknown&gt;
+#1 0x557e291087a6 &lt;unknown&gt;
+#2 0x557e2910bd03 &lt;unknown&gt;
+#3 0x557e2910ba72 &lt;unknown&gt;
+#4 0x557e2910bd8c &lt;unknown&gt;
+#5 0x557e29147497 &lt;unknown&gt;
+#6 0x557e2917ff67 &lt;unknown&gt;
+#7 0x557e29166082 &lt;unknown&gt;
+#8 0x557e2917e932 &lt;unknown&gt;
+#9 0x557e29165e53 &lt;unknown&gt;
+#10 0x557e291389ea &lt;unknown&gt;
+#11 0x557e29139b2e &lt;unknown&gt;
+#12 0x557e29398d5e &lt;unknown&gt;
+#13 0x557e2939ca80 &lt;unknown&gt;
+#14 0x557e2937e8b0 &lt;unknown&gt;
+#15 0x557e2939db63 &lt;unknown&gt;
+#16 0x557e2936ff75 &lt;unknown&gt;
+#17 0x557e293c0998 &lt;unknown&gt;
+#18 0x557e293c0b27 &lt;unknown&gt;
+#19 0x557e293dbc23 &lt;unknown&gt;
+#20 0x7f8edced2b43 &lt;unknown&gt;
+</msg>
+<status status="FAIL" starttime="20230319 07:50:44.288" endtime="20230319 07:50:45.831"/>
+</kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>xpath=//*[@id="notice"]/ul/li</arg>
 <arg>timeout=30s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230319 07:29:22.365" endtime="20230319 07:29:23.767"/>
+<status status="NOT RUN" starttime="20230319 07:50:45.831" endtime="20230319 07:50:45.831"/>
 </kw>
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>xpath=//*[@id="notice"]/ul/li</arg>
 <arg>Invalid email or password.</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20230319 07:29:23.782" level="INFO">Element 'xpath=//*[@id="notice"]/ul/li' contains text 'Invalid email or password.'.</msg>
-<status status="PASS" starttime="20230319 07:29:23.767" endtime="20230319 07:29:23.782"/>
+<status status="NOT RUN" starttime="20230319 07:50:45.832" endtime="20230319 07:50:45.832"/>
 </kw>
-<status status="PASS" starttime="20230319 07:29:22.365" endtime="20230319 07:29:23.782"/>
+<status status="FAIL" starttime="20230319 07:50:44.288" endtime="20230319 07:50:45.832"/>
 </kw>
 <doc>Test Steps :
 - Open Chrome Browser
@@ -65,23 +95,47 @@ Verification Passed</msg>
 - Click Signin button
 - Make sure the Warning Message displayed</doc>
 <tag>Login</tag>
-<status status="PASS" starttime="20230319 07:29:18.941" endtime="20230319 07:29:23.783">Verification Passed</status>
+<status status="FAIL" starttime="20230319 07:50:40.015" endtime="20230319 07:50:45.832">StaleElementReferenceException: Message: stale element reference: element is not attached to the page document
+  (Session info: headless chrome=111.0.5563.64)
+Stacktrace:
+#0 0x557e29344243 &lt;unknown&gt;
+#1 0x557e291087a6 &lt;unknown&gt;
+#2 0x557e2910bd03 &lt;unknown&gt;
+#3 0x557e2910ba72 &lt;unknown&gt;
+#4 0x557e2910bd8c &lt;unknown&gt;
+#5 0x557e29147497 &lt;unknown&gt;
+#6 0x557e2917ff67 &lt;unknown&gt;
+#7 0x557e29166082 &lt;unknown&gt;
+#8 0x557e2917e932 &lt;unknown&gt;
+#9 0x557e29165e53 &lt;unknown&gt;
+#10 0x557e291389ea &lt;unknown&gt;
+#11 0x557e29139b2e &lt;unknown&gt;
+#12 0x557e29398d5e &lt;unknown&gt;
+#13 0x557e2939ca80 &lt;unknown&gt;
+#14 0x557e2937e8b0 &lt;unknown&gt;
+#15 0x557e2939db63 &lt;unknown&gt;
+#16 0x557e2936ff75 &lt;unknown&gt;
+#17 0x557e293c0998 &lt;unknown&gt;
+#18 0x557e293c0b27 &lt;unknown&gt;
+#19 0x557e293dbc23 &lt;unknown&gt;
+#20 0x7f8edced2b43 &lt;unknown&gt;
+</status>
 </test>
 <doc>This is UI Automation Test on the Signin Page</doc>
-<status status="PASS" starttime="20230319 07:29:18.843" endtime="20230319 07:29:23.783"/>
+<status status="FAIL" starttime="20230319 07:50:39.917" endtime="20230319 07:50:45.833"/>
 </suite>
-<status status="PASS" starttime="20230319 07:29:18.829" endtime="20230319 07:29:23.784"/>
+<status status="FAIL" starttime="20230319 07:50:39.903" endtime="20230319 07:50:45.833"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Login</stat>
+<stat pass="0" fail="1" skip="0">Login</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Testcases">Testcases</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Login">Testcases.Login</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Testcases">Testcases</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Login">Testcases.Login</stat>
 </suite>
 </statistics>
 <errors>
