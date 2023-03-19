@@ -18,5 +18,7 @@ Documentation    This is UI Automation Test on the Signin Page
         Open Chrome Browser
         Go to Sign in Page
     #2. Verification
-        Click The Sign In Button
-        Message "Invalid email or password." is displayed
+2. Click The Sign In Button
+    Click The Sign In Button
+3. Message "Invalid email or password." is displayed
+    Message "Invalid email or password." is displayed
