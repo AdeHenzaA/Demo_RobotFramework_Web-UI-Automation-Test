@@ -24,6 +24,7 @@ jobs:
         curl -sSL https://chromedriver.storage.googleapis.com/$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip -o chromedriver.zip
         unzip chromedriver.zip -d /usr/local/bin
         chmod +x /usr/local/bin/chromedriver
+        google-chrome --version
         sudo apt-get update
         sudo apt-get install -y python3-pip
         pip3 install robotframework
